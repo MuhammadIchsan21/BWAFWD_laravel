@@ -412,6 +412,7 @@ header .btn-get-started:hover {
 
 .section-details-content .gj-datepicker .input-group-append .btn {
   padding-right: 30px;
+  padding-top: 1px;
 }
 
 .section-success {
