@@ -27,29 +27,29 @@
                         <p>Republic of Indonesia Raya</p>
                         <div class="gallery">
                             <div class="xzoom-container">
-                                <img src="frontend/images/Mask Group 9.jpg" class="xzoom" id="xzoom-default"
-                                    xoriginal="frontend/images/Mask Group 9.jpg" />
+                                <img src="{{url('frontend/images/Mask Group 9.jpg')}}" class="xzoom" id="xzoom-default"
+                                    xoriginal="{{url('frontend/images/Mask Group 9.jpg')}}" />
                             </div>
                             <div class="xzoom-thumbs">
-                                <a href="frontend/images/Mask Group 9.jpg">
-                                    <img src="frontend/images/Mask Group 9.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/Mask Group 9.jpg" />
+                                <a href="{{url('frontend/images/Mask Group 9.jpg')}}">
+                                    <img src="{{url('frontend/images/Mask Group 9.jpg')}}" class="xzoom-gallery"
+                                        width="128" xpreview="{{url('frontend/images/Mask Group 9.jpg')}}" />
                                 </a>
-                                <a href="frontend/images/maskgroup10.jpg">
-                                    <img src="frontend/images/maskgroup10.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/maskgroup10.jpg" />
+                                <a href="{{url('frontend/images/maskgroup10.jpg')}}"> <img
+                                        src="{{url('frontend/images/maskgroup10.jpg')}}" class="xzoom-gallery"
+                                        width="128" xpreview="{{url('frontend/images/maskgroup10.jpg')}}" />
                                 </a>
-                                <a href="frontend/images/maskgrup11.jpg">
-                                    <img src="frontend/images/maskgrup11.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/maskgrup11.jpg" />
+                                <a href="{{url('frontend/images/maskgrup11.jpg')}}">
+                                    <img src="{{url('frontend/images/maskgrup11.jpg')}}" class="xzoom-gallery"
+                                        width="128" xpreview="{{url('frontend/images/maskgrup11.jpg')}}" />
                                 </a>
-                                <a href="frontend/images/maskgrup12.jpg">
-                                    <img src="frontend/images/maskgrup12.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/maskgrup12.jpg" />
+                                <a href="{{url('frontend/images/maskgrup12.jpg')}}">
+                                    <img src="{{url('frontend/images/maskgrup12.jpg')}}" class="xzoom-gallery"
+                                        width="128" xpreview="{{url('frontend/images/maskgrup12.jpg')}}" />
                                 </a>
-                                <a href="frontend/images/maskgrup13.jpg">
-                                    <img src="frontend/images/maskgrup13.jpg" class="xzoom-gallery" width="128"
-                                        xpreview="frontend/images/maskgrup13.jpg" />
+                                <a href="{{url('frontend/images/maskgrup13.jpg')}}"> <img
+                                        src="{{url('frontend/images/maskgrup13.jpg')}}" class="xzoom-gallery"
+                                        width="128" xpreview="{{url('frontend/images/maskgrup13.jpg')}}" />
                                 </a>
                             </div>
                         </div>
@@ -73,21 +73,21 @@
                         </p>
                         <div class="features row">
                             <div class="col-md-4">
-                                <img src="frontend/images/ic_event.png" alt="" class="features-image" />
+                                <img src="{{url('frontend/images/ic_event.png')}}" alt="" class="features-image" />
                                 <div class="description">
                                     <h3>Featured Event</h3>
                                     <p>Tari Beskalan</p>
                                 </div>
                             </div>
                             <div class="col-md-4 border-left">
-                                <img src="frontend/images/ic_bahasa.png" alt="" class="features-image" />
+                                <img src="{{url('frontend/images/ic_bahasa.png')}}" alt="" class="features-image" />
                                 <div class="description">
                                     <h3>Language</h3>
                                     <p>Bahasa Indonesia</p>
                                 </div>
                             </div>
                             <div class="col-md-4 border-left">
-                                <img src="frontend/images/ic_foods.png" alt="" class="features-image" />
+                                <img src="{{url('frontend/images/ic_foods.png')}}" alt="" class="features-image" />
                                 <div class="description">
                                     <h3>Foods</h3>
                                     <p>Local Foods</p>
@@ -100,11 +100,11 @@
                     <div class="card card-details card-right">
                         <h2>Members are going</h2>
                         <div class="members my-2">
-                            <img src="./frontend/images/ansel 1.png" alt="" class="member-image mr-1" />
-                            <img src="./frontend/images/novita 1.png" alt="" class="member-image mr-1" />
-                            <img src="./frontend/images/bajur orange.png" alt="" class="member-image mr-1" />
-                            <img src="./frontend/images/simerah.png" alt="" class="member-image mr-1" />
-                            <img src="./frontend/images/9+.png" alt="" class="member-image mr-1" />
+                            <img src="{{url('./frontend/images/ansel 1.png')}}" alt="" class="member-image mr-1" />
+                            <img src="{{url('./frontend/images/novita 1.png')}}" alt="" class="member-image mr-1" />
+                            <img src="{{url('./frontend/images/bajur orange.png')}}" alt="" class="member-image mr-1" />
+                            <img src="{{url('./frontend/images/simerah.png')}}" alt="" class="member-image mr-1" />
+                            <img src="{{url('./frontend/images/9+.png')}}" alt="" class="member-image mr-1" />
                         </div>
                         <hr />
                         <h2>Trip Informations</h2>
@@ -136,7 +136,7 @@
                         </table>
                     </div>
                     <div class="join-container">
-                        <a href="checkout.html" class="btn btn-block btn-join-now mt-5 py-2">
+                        <a href="{{route('checkout')}}" class="btn btn-block btn-join-now mt-5 py-2">
                             Join Now
                         </a>
                     </div>

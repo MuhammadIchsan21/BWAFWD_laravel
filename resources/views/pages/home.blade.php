@@ -67,7 +67,7 @@ NOMADS
                         <div class="travel-country">Indonesia</div>
                         <div class="travel-location">DERATAN, BALI</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{route('detail')}}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -80,7 +80,7 @@ NOMADS
                         <div class="travel-country">Indonesia</div>
                         <div class="travel-location">BROMO, MALANG</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{route('detail')}}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -95,7 +95,7 @@ NOMADS
                             DERAWAN, BERAU
                         </div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{route('detail')}}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -108,7 +108,7 @@ NOMADS
                         <div class="travel-country">Indonesia</div>
                         <div class="travel-location">SEMERU, JATIM</div>
                         <div class="travel-button mt-auto">
-                            <a href="details.html" class="btn btn-travel-details px-4">
+                            <a href="{{route('detail')}}" class="btn btn-travel-details px-4">
                                 View Details
                             </a>
                         </div>
@@ -129,7 +129,7 @@ NOMADS
                     </p>
                 </div>
                 <div class="col-md-8 text-center">
-                    <img src="frontend/images/Partner.png" alt="Logo Partner" class="img-partner" />
+                    <img src="{{url('frontend/images/Partner.png')}}" alt="Logo Partner" class="img-partner" />
                 </div>
             </div>
         </div>
@@ -154,7 +154,8 @@ NOMADS
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonials text-center">
                         <div class="testimonials-content">
-                            <img src="frontend/images/Mask Group 6.png" alt="user" class="mb-4 rounded-circle" />
+                            <img src="{{url('frontend/images/Mask Group 6.png')}}" alt="user"
+                                class="mb-4 rounded-circle" />
                             <h3 class="mb-4">Muhammad Ichsan</h3>
                             <p class="testimonial">
                                 " It was glorious and I could not stop
@@ -169,7 +170,8 @@ NOMADS
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonials text-center">
                         <div class="testimonials-content">
-                            <img src="frontend/images/Mask Group 7.png" alt="user" class="mb-4 rounded-circle" />
+                            <img src="{{url('frontend/images/Mask Group 7.png')}}" alt="user"
+                                class="mb-4 rounded-circle" />
                             <h3 class="mb-4">Anselma Putri</h3>
                             <p class="testimonial">
                                 " The trip was amazing and I saw
@@ -184,7 +186,8 @@ NOMADS
                 <div class="col-sm-6 col-md-6 col-lg-4">
                     <div class="card card-testimonials text-center">
                         <div class="testimonials-content">
-                            <img src="frontend/images/Mask Group 8.png" alt="user" class="mb-4 rounded-circle" />
+                            <img src="{{url('frontend/images/Mask Group 8.png')}}" alt="user"
+                                class="mb-4 rounded-circle" />
                             <h3 class="mb-4">Anselma Putri</h3>
                             <p class="testimonial">
                                 " I really like the mountain,so I want
