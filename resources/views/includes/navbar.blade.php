@@ -29,18 +29,40 @@
                     <a href="#" class="nav-link">Testimonial</a>
                 </li>
             </ul>
+            @guest
             <!--Mobile Button -->
             <form class="form-inline d-sm-block d-md-none">
-                <button class="btn btn-login my-2 my-sm-0">
+                <button class="btn btn-login my-2 my-sm-0" type="button"
+                    onclick="event.preventDefault();location.href='{{url('login')}}';">
                     Masuk
                 </button>
             </form>
             <!--Dekstop Button -->
             <form class="form-inline my-2 my-lg-0 d-none d-md-block">
-                <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
+                <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4" type="button"
+                    onclick="event.preventDefault(); location.href='{{url('login')}}';">
                     Masuk
                 </button>
             </form>
+            @endguest
+
+
+            @auth
+            <!--Mobile Button -->
+            <form class="form-inline d-sm-block d-md-none" action="{{url('logout')}}" method="POST">
+                @csrf
+                <button class="btn btn-login my-2 my-sm-0">
+                    Keluar
+                </button>
+            </form>
+            <!--Dekstop Button -->
+            <form class="form-inline my-2 my-lg-0 d-none d-md-block" action="{{url('logout')}}" method="POST">
+                @csrf
+                <button class="btn btn-login btn-navbar-right my-2 my-sm-0 px-4">
+                    Keluar
+                </button>
+            </form>
+            @endauth
         </div>
     </nav>
 </div>
