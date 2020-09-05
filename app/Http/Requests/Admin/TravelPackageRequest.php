@@ -24,15 +24,15 @@ class TravelPackageRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|max255',
-            'location' => 'required|max255',
+            'title' => 'required|max:255',
+            'location' => 'required|max:255',
             'about' => 'required',
-            'featured_event' => 'required|max255',
-            'language' => 'required|max255',
-            'foods' => 'required|max255',
-            'departure_date' => 'required|max255',
-            'duration' => 'required|max255',
-            'type' => 'required|max255',
+            'featured_event' => 'required|max:255',
+            'language' => 'required|max:255',
+            'foods' => 'required|max:255',
+            'departure_date' => 'required|date',
+            'duration' => 'required|max:255',
+            'type' => 'required|max:255',
             'price' => 'required|integer'
         ];
     }
