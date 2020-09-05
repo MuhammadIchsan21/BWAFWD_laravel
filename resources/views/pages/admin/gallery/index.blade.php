@@ -29,7 +29,7 @@
                             <td>{{$item->id}}</td>
                             <td>{{$item->travel_package->title}}</td>
                             <td>
-                                <img src="{{storage::url($item->image)}}" alt="" style="width:150px"
+                                <img src="{{Storage::url($item->image)}}" alt="" style="width:150px"
                                     class="img-thumbnail" />
                             </td>
                             <td>
