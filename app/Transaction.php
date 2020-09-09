@@ -17,13 +17,12 @@ class Transaction extends Model
     protected $hidden = [
     //
     ];
-
     public function details()
     {
-        return $this->hasMany(TransactionDetail::class, 'transaction_id', 'id');
+        return $this->hasMany(TransactionDetail::class, 'transactions_id', 'id');
     }
 
-    public function travel_packages()
+    public function travel_package()
     {
         return $this->belongsTo(TravelPackage::class, 'travel_packages_id', 'id');
     }

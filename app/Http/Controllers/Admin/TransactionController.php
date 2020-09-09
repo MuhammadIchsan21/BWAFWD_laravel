@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\TransactionRequest;
+use App\TravelPackage;
 use App\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -20,6 +21,9 @@ class TransactionController extends Controller
         $items = Transaction::with([
             'details', 'travel_package', 'user'
         ])->get();
+        // dd($items);
+        // datanya ada cuma ada kesalahan di db biasanya
+        // traval id 1 udh ke hapus jadi error, klo mau cek dd
         return view('pages.admin.transaction.index', [
             'items' => $items
             ]);
@@ -61,7 +65,9 @@ class TransactionController extends Controller
         $item = Transaction::with([
             'details', 'travel_package', 'user'
         ])->findOrFail($id);
-        return view('pages.admin.transaction.edit', [
+
+
+        return view('pages.admin.transaction.detail', [
             'item' => $item
         ]);
     }

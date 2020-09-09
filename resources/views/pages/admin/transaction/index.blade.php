@@ -24,11 +24,12 @@
                         </tr>
                     </thead>
                     <tbody>
+
                         @forelse ($items as $item)
                         <tr>
-                            <td>{{$item->id}}</td>
-                            <td>{{$item->travel_package->title}}</td>
-                            <td>{{$item->user->name}}</td>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->travel_package->title }}</td>
+                            <td>{{ $item->user->name }}</td>
                             <td>{{$item->additional_visa}}</td>
                             <td>{{$item->transaction_total}}</td>
                             <td>{{$item->transaction_status}}</td>
