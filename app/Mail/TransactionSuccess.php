@@ -22,6 +22,7 @@ class TransactionSuccess extends Mailable
     public function __construct($data)
     {
         $this->data = $data;
+        // dd($data);
     }
 
     /**
@@ -32,7 +33,7 @@ class TransactionSuccess extends Mailable
     public function build()
     {
         return $this
-        ->from('hi@bingung-travel.com', 'NOMADS')
+        ->from('ichsanteratai@gmail.com', 'NOMADS')
         ->subject('Tiket Travel Mu')
         ->view('email.transaction-success');
     }

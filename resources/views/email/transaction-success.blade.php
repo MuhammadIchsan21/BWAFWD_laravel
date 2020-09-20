@@ -120,7 +120,8 @@
                                                 <tbody>
                                                     <tr>
                                                         <td style="width:150px;">
-                                                            <img alt="" height="auto" src="images/Logo Nomads@2x.png"
+                                                            <img alt="" height="auto"
+                                                                src="{{url('frontend/images/Logo Nomads@2x.png')}}"
                                                                 style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
                                                                 width="150" />
                                                         </td>
@@ -235,7 +236,9 @@
                                                 <tbody>
                                                     <tr>
                                                         <td style="width:550px;">
-                                                            <img alt="" height="auto" src="images\Nusa Penida@2x.jpg"
+                                                            <img alt="" height="auto"
+                                                                {{-- Panggil data secara dinamis lewat database --}}
+                                                                src="{{url('storage/' . $data->travel_package->galleries->first()->image)}}"
                                                                 style="border:none;display:block;outline:none;text-decoration:none;height:auto;width:100%;font-size:13px;"
                                                                 width="550" />
                                                         </td>
@@ -299,9 +302,10 @@
                                                             style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
                                                             <div
                                                                 style="font-family:Assistant, Helvetica, Arial, Sans-serif;font-size:18px;line-height:20px;text-align:left;color:#071C4D;">
-                                                                Hi, Muhammad Ichsan <br /><br /> Tiket digital kamu
+                                                                Hi, {{$data->user->name}} <br /><br /> Tiket digital
+                                                                kamu
                                                                 sudah berhasil dicetak.<br />Booking ID <strong>
-                                                                    #22081996</strong></div>
+                                                                    #{{$data->id}}</strong></div>
                                                         </td>
                                                     </tr>
                                                     <tr>
@@ -313,14 +317,13 @@
                                                                 <tr>
                                                                     <td colspan="3">Members</td>
                                                                 </tr>
+                                                                @foreach ($data->details as $details)
                                                                 <tr>
-                                                                    <td><strong>Muhammad Ichsan</strong></td>
-                                                                    <td style="text-align: right">Indonesia, ID</td>
+                                                                    <td><strong>{{$details->username}}</strong></td>
+                                                                    <td style="text-align: right">
+                                                                        {{$details->nationality}}</td>
                                                                 </tr>
-                                                                <tr>
-                                                                    <td><strong>Anselma Putri</strong></td>
-                                                                    <td style="text-align: right">Singapore, SG</td>
-                                                                </tr>
+                                                                @endforeach
                                                             </table>
                                                         </td>
                                                     </tr>
@@ -335,11 +338,13 @@
                                                                 </tr>
                                                                 <tr>
                                                                     <td><strong>Departure</strong></td>
-                                                                    <td style="text-align: right">Nusa Penida</td>
+                                                                    <td style="text-align: right">
+                                                                        {{$data->travel_package->title}}</td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td><strong>Date and Time</strong></td>
-                                                                    <td style="text-align: right">Sat, 19 September 2020
+                                                                    <td style="text-align: right">
+                                                                        {{$data->travel_package->departure_date}}
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -356,9 +361,9 @@
                                                                         role="presentation"
                                                                         style="border:none;border-radius:10px;cursor:auto;mso-padding-alt:10px 25px;background:#ff9e53;"
                                                                         valign="middle">
-                                                                        <p
+                                                                        <a href="{{url('checkout/' .$data->id)}}"
                                                                             style="display:inline-block;background:#ff9e53;color:#ffffff;font-family:Assistant, Helvetica, Arial, Sans-serif;font-size:18px;font-weight:normal;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:10px;">
-                                                                            Check Detail </p>
+                                                                            Check Detail </a>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -472,7 +477,8 @@
                                                 style="color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                                                 <tr>
                                                     <td style="width: 50px">
-                                                        <img src="images/ic_support@2x.png" width="50px" />
+                                                        <img src="{{url('frontend/images/ic_support@2x.png')}}"
+                                                            width="50px" />
                                                     </td>
                                                     <td style="
 								font-size: 18px;
